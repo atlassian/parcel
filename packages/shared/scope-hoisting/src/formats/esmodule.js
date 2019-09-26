@@ -122,6 +122,9 @@ export function generateExports(
         path.replaceWith(t.exportNamedDeclaration(path.node, []));
         for (let id of exportedIds) {
           let exportName = nullthrows(exportedIdentifiers.get(id));
+          if (path.scope.hasBinding(exportName)) {
+            rename(path.scope, exportName, path.scope.generateUid(exportName));
+          }
           rename(path.scope, id, exportName);
           exported.add(exportName);
         }
@@ -146,6 +149,13 @@ export function generateExports(
           let specifiers = [];
           for (let id of exportedIds) {
             let exportName = nullthrows(exportedIdentifiers.get(id));
+            if (path.scope.hasBinding(exportName)) {
+              rename(
+                path.scope,
+                exportName,
+                path.scope.generateUid(exportName)
+              );
+            }
             rename(path.scope, id, exportName);
             exported.add(exportName);
             specifiers.push(
