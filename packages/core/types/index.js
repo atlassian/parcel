@@ -190,7 +190,6 @@ export interface PluginOptions {
   +logLevel: LogLevel;
   +rootDir: FilePath;
   +projectRoot: FilePath;
-  +targets: Array<Target>;
   +cacheDir: FilePath;
   +inputFS: FileSystem;
   +outputFS: FileSystem;

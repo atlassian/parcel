@@ -21,7 +21,7 @@ import path from 'path';
 import url from 'url';
 
 import {NamedBundle, bundleToInternalBundle} from './public/Bundle';
-import {
+import type {
   Bundle as BundleType,
   BundleGraph as BundleGraphType
 } from '@parcel/types';
