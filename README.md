@@ -1,3 +1,7 @@
+# THIS REPOSITORY IS ARCHIVED
+This fork of Parcel is ~5 years behind Parcel and unused by Atlassian. Please use to the upstream Parcel repo.
+
+
 <p align="center">
   <a href="https://parceljs.org/" target="_blank">
     <img alt="Parcel" src="https://user-images.githubusercontent.com/19409/31321658-f6aed0f2-ac3d-11e7-8100-1587e676e0ec.png" width="749">
